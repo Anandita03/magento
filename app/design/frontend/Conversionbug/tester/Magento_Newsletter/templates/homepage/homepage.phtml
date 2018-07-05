@@ -1,0 +1,25 @@
+<cms_index_index translate="label">
+        <reference name="content">
+            <block type="sama_productblocks/list" name="sama_productblocks_newproducts" after="call_to_actions" template="sama_productblocks/list.phtml">
+                <action method="setIdentifier"><id>homepage-latest</id></action>
+            </block>
+
+            <block type="core/template" name="top_banners" before="-" template="homepage/topbanners.phtml">
+                <block type="experius_linkmanager/link_list" name="homepage_banner">
+                    <action method="setIdentifier"><key>hoesjesoutlet-homepage_banner</key></action>
+                </block>
+                <block type="experius_linkmanager/link_list" name="homepage_small">
+                    <action method="setIdentifier"><key>hoesjesoutlet-homepage_small</key></action>
+                </block>
+            </block>
+            <block type="core/template" name="cta_banners" after="modelfilter_search" template="homepage/cta.phtml">
+                <block type="experius_linkmanager/link_list" name="homepage_cta">
+                    <action method="setIdentifier"><key>hoesjesoutlet-homepage_cta</key></action>
+                </block>
+            </block>
+            <block type="core/template" name="home_text" after="modelfilter_search" template="homepage/text.phtml">
+    <!-- call to your custom html code block -->
+    <block type="core/template" name="my.homepage.block" as="homepage_text" template="homepage/my_homepage.phtml" />
+</block>
+        </reference>
+    </cms_index_index>
