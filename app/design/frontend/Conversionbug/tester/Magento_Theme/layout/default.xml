@@ -44,6 +44,7 @@
         <referenceBlock name="copyright" remove="true"/>
         <referenceBlock name="catalog.compare.sidebar" remove="true"/>
         <referenceBlock name="view.addto.compare" remove="true" />
+        <referenceBlock name="category.product.addto.compare" remove="true"/>
         <!-- <referenceBlock name="wish-list-link" remove="true"/> -->
         <!-- <move element="copyright" destination="before.body.end"/> -->
     </body>
