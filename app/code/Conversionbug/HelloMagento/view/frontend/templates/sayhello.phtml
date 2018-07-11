@@ -7,11 +7,10 @@ echo $block->sayHello();
 // echo $block->helper();
  echo "<br/>";
 // echo $block->sayHello1();
-
-
- echo $block->getUrl(); 
- echo "<br/>";
- echo $block->getBaseUrl();
- echo $block->getMediaUrl();
+ echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('banner')->toHtml();
+ echo $block->getUrl(); //to print the current path                   
+ $url =  $block->getUrl('hellomagento/Index/Test', ['name' => 'Annie']);
+ echo '<br/>';
+ echo "<a href='$url'>view</a>";
  ?>
     
