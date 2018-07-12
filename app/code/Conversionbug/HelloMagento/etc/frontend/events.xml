@@ -1,6 +1,18 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
-    <event name="conversionbug_hellomagento_display_text">
+    <!-- <event name="conversionbug_hellomagento_display_text">
         <observer name="cb_display_text" instance="Conversionbug\HelloMagento\Observer\ChangeDisplayText" />
+    </event> -->
+    <!-- <event name="customer_login">
+        <observer name="customer_login_observer" instance="Conversionbug\HelloMagento\Observer\ChangeDisplayText" />
+    </event> -->
+    <!-- <event name="checkout_onepage_controller_success_action">
+        <observer name="checkout_controller_success_action" instance="Conversionbug\HelloMagento\Observer\ChangeDisplayText" />
+    </event> -->
+    <!-- <event name="customer_logout">
+        <observer name="customer_logout_observer" instance="Conversionbug\HelloMagento\Observer\ChangeDisplayText" />
+    </event> -->
+    <event name="catalog_product_save_after">
+        <observer name="some_unique_name_here" instance="Conversionbug\HelloMagento\Observer\ChangeDisplayText" />
     </event>
 </config>
