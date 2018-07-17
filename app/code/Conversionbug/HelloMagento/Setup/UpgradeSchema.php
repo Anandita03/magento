@@ -26,6 +26,20 @@ class UpgradeSchema implements UpgradeSchemaInterface
             );
 
         }
+        if (version_compare($context->getVersion(), '1.1.2', '<=')) {
+
+            $setup->getConnection()->addColumn(
+                $setup->getTable('Table_example'),
+                'email',
+                [
+                    'type' => \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
+                    'length' => 255,
+                    'nullable' => true,
+                    'comment' => 'Email'
+                ]
+            );
+
+        }
 
         $setup->endSetup();
     }

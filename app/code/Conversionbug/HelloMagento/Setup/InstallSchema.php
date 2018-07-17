@@ -1,35 +1,48 @@
 <?php
 namespace Conversionbug\HelloMagento\Setup;
 
-class InstallSchema implements \Magento\Framework\Setup\InstallSchemaInterface
+use Magento\Eav\Setup\EavSetup;
+use Magento\Eav\Setup\EavSetupFactory;
+use Magento\Framework\Setup\InstallDataInterface;
+use Magento\Framework\Setup\ModuleContextInterface;
+use Magento\Framework\Setup\ModuleDataSetupInterface;
+
+class InstallData implements InstallDataInterface
 {
+	private $eavSetupFactory;
 
-	public function install(\Magento\Framework\Setup\SchemaSetupInterface $setup, \Magento\Framework\Setup\ModuleContextInterface $context)
+	public function __construct(EavSetupFactory $eavSetupFactory)
 	{
-		$installer = $setup;
-
-        $installer->startSetup();
-
-        $table = $installer->getConnection()
-            ->newTable($installer->getTable('Table_example'))
-            ->addColumn(
-                'entity_id',
-                \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
-                null,
-                ['identity' => true, 'unsigned' => true, 'nullable' => 
-false, 'primary' => true],
-                'Entity ID'
-            )
-            ->addColumn(
-                'name',
-                \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
-                255,
-                ['nullable' => false],
-                'Name'
-            )
-            ->setComment('Table Example');
-        $installer->getConnection()->createTable($table);
-
-		$installer->endSetup();
-			}
+		$this->eavSetupFactory = $eavSetupFactory;
+	}
+	
+	public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
+	{
+		$eavSetup = $this->eavSetupFactory->create(['setup' => $setup]);
+		$eavSetup->addAttribute(
+			\Magento\Catalog\Model\Product::ENTITY,
+			'sample_attribute',
+			[
+				'type' => 'int',
+				'backend' => '',
+				'frontend' => '',
+				'label' => 'Sample Atrribute',
+				'input' => 'select',
+				'class' => '',
+				'source' => 'Conversionbug\HelloMagento\Model\Config\Source\Options',
+				'global' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
+				'visible' => true,
+				'required' => true,
+				'user_defined' => false,
+				'default' => '',
+				'searchable' => false,
+				'filterable' => false,
+				'comparable' => false,
+				'visible_on_front' => false,
+				'used_in_product_listing' => true,
+				'unique' => false,
+				'apply_to' => ''
+			]
+		);
+	}
 }
