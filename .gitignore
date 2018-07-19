@@ -71,3 +71,5 @@ atlassian*
 /var
 /vendor
 /pub
+/generated
+/phpserver
