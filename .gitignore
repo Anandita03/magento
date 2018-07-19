@@ -73,3 +73,15 @@ atlassian*
 /pub
 /generated
 /phpserver
+/.php_cs.dist
+/.travis.yml
+/.user.ini
+/CHANGELOG.md
+/COPYING.txt
+/LICENSE.txt
+/LICENSE_AFL.txt
+/README.md
+/auth.json.sample
+/php.ini.sample
+/index.php
+/nginx.conf.sample
