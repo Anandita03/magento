@@ -1,8 +1,8 @@
 <?php
-namespace Conversionbug\HelloMagento\Model\ResourceModel;
+namespace Conversionbug\Crud\Model\ResourceModel;
 
 
-class Post extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
+class Sample extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {
 	
 	public function __construct(
@@ -14,7 +14,7 @@ class Post extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 	
 	protected function _construct()
 	{
-		$this->_init('Table_example', 'entity_id');
+		$this->_init('newtable', 'id');
 	}
 	
 }

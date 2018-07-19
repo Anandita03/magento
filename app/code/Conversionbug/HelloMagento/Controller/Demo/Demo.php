@@ -20,6 +20,7 @@ class Demo extends \Magento\Framework\App\Action\Action
 
 	public function execute()
 	{
+        echo 'Y';exit;
 		$post = $this->_postFactory->create();
 		$collection = $post->getCollection();
 		foreach($collection as $item){

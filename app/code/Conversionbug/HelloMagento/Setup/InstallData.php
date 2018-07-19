@@ -20,5 +20,4 @@ class InstallData implements InstallDataInterface
 {
 	
 }
-	
 }
