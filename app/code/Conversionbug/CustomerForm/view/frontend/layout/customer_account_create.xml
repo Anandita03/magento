@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance dc" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceContainer name="content">
+        <referenceBlock name="customer_form_register">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Conversionbug_CustomerForm::form/register.phtml</argument>
+            </action>
+        </referenceBlock>
+    </referenceContainer>
+</page>
+
+<!-- 
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="customer_form_register" remove="true"/>
+        <referenceContainer name="Conversionbug_CustomerForm">
+            <block class="Conversionbug\CustomerForm\Block\Form" name="customerForm" template="Conversionbug_CustomerForm::form/register.phtml" />
+        </referenceContainer>
+    </body>
+</page> -->

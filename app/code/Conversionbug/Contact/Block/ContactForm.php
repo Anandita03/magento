@@ -18,8 +18,8 @@ class ContactForm extends \Magento\Contact\Block\ContactForm
 
     public function getFormAction()
     {
-       // echo "override block";
-        return $this->getUrl('contact/index/post', ['_secure' => true]);
+       echo "override block";
+       // return $this->getUrl('contact/index/post', ['_secure' => true]);
     }
 
     // public function getText() 
