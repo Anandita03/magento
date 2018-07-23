@@ -4,7 +4,7 @@
         <helloworld>
             <general>
                 <enable>1</enable>
-                <display_text>Hello World</display_text>
+                <display_text>HelloWorld</display_text>
             </general>
         </helloworld>
     </default>
