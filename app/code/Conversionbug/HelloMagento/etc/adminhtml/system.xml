@@ -19,6 +19,16 @@
                     <label>Display Text</label>
                     <comment>This text will display on the frontend</comment>
                 </field>
+                <field id="custom_select" 
+                    translate="label" 
+                    type="select" 
+                    sortOrder="2" 
+                    showInDefault="1" 
+                    showInWebsite="1" 
+                    showInStore="1">
+                    <label>Custom source model</label>
+                    <source_model>Conversionbug\HelloMagento\Model\Config\Source\Custom</source_model>
+                </field>
             </group>
         </section>
     </system>
