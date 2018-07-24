@@ -8,13 +8,9 @@ xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
             resource="Conversionbug_HelloMagento::simplenews" />
         <add id="Conversionbug_HelloMagento::add_news" title="Add News" 
             module="Conversionbug_HelloMagento" sortOrder="1" parent="Conversionbug_HelloMagento::main_menu" 
-            action="simplenews/news/new" resource="Conversionbug_SimpleNews::manage_news" />
+            action="simplenews/news/addnews" resource="Conversionbug_SimpleNews::manage_news" />
         <add id="Conversionbug_HelloMagento::manage_news" title="Manage News" 
             module="Conversionbug_HelloMagento" sortOrder="2" parent="Conversionbug_HelloMagento::main_menu" 
             action="simplenews/news/index" resource="Conversionbug_SimpleNews::manage_news" />
-        <add id="Conversionbug_HelloMagento::configuration" title="Configurations" 
-            module="Conversionbug_HelloMagento" sortOrder="3" parent="Conversionbug_HelloMagento::main_menu" 
-            action="adminhtml/system_config/edit/section/simplenews" 
-            resource="Conversionbug_HelloMagento::configuration" />
     </menu>
 </config>
