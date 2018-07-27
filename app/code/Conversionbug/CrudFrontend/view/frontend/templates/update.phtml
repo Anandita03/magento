@@ -1,0 +1,10 @@
+<h1>Details</h1>
+<?php 
+    $item = $block->getTableData(); 
+?>
+<form action="<?php echo $block->getSaveAction() ?>" method="post">
+     <input name="id" type="hidden" value="<?php echo $item->getId() ?>" required/>
+   NAME: <input name="name" type="text" value="<?php echo $item->getName() ?>" required/>
+   AGE:  <input name="age" type="number" value="<?php echo $item->getAge() ?>" required/>
+         <input type="submit" value="Submit">    
+</form>
