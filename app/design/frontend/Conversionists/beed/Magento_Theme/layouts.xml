@@ -1,0 +1,5 @@
+<page_layouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/PageLayout/etc/layouts.xsd">
+    <layout id="inchoos-layout">
+        <label translate="true">Cbugs Layout</label>
+    </layout>
+</page_layouts>
