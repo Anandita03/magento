@@ -7,20 +7,30 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceBlock name="header.links">
-            <block class="Magento\Framework\View\Element\Html\Link" name="custom-link">
+    <referenceBlock name="header.panel" remove="true" />
+    <referenceBlock name="navigation.sections" remove="true" />
+    <referenceBlock name="minicart" remove="true" />
+    <referenceBlock name="top.search" remove="true" />
+    <!-- Creating new container reference: Conversionbug START -->
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Cms\Block\Block" name="custom_menu_after">
                 <arguments>
-                    <argument name="label" xsi:type="string" translate="true">FAQ</argument>
-                    <argument name="path" xsi:type="string" translate="true">faq/index/faq</argument>
-                </arguments>
-            </block>
-        </referenceBlock>
-        <referenceContainer name="header.panel">
-            <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
-                <arguments>
-                    <argument name="css_class" xsi:type="string">header links</argument>
+                    <argument name="block_id" xsi:type="string">custom_menu_after</argument>
                 </arguments>
             </block>
         </referenceContainer>
+        <move element="custom_menu_after" destination="header-wrapper" after="logo"/>
+    <!-- Creating new container reference: Conversionbug END -->
+    
+        
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_img_width" xsi:type="number">150</argument>
+                <argument name="logo_img_height" xsi:type="number">63</argument>
+            </arguments>
+        </referenceBlock>
+        <referenceBlock name="footer_links" remove="true" />
+        <referenceBlock name="report.bugs" remove="true"/>
+        <referenceBlock name="form.subscribe" remove="true"/>
     </body>
 </page>
