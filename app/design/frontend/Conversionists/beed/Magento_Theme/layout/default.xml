@@ -25,6 +25,16 @@
             </block>
         </referenceContainer>
         <move element="custom_menu_after" destination="header-wrapper" after="logo"/>
+
+
+        <referenceContainer name="footer">
+            <block class="Magento\Cms\Block\Block" name="footers">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footers</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <move element="footers" destination="footer" before="copyright"/>
     <!-- Creating new container reference: Conversionbug END -->
     
         
