@@ -96,11 +96,23 @@
                 //display: flex;
                 float:right;
                 margin-right: 40px !important;
-                img{
-                    width:11px;
-                    height:13px;
-                    padding: 4px;
+                span{
+                    padding-right: 6px;
                 }
+                .icon{
+                    > a{
+                        color:white;
+                       &:hover{
+                           font-size:30px;
+                       }
+                    }
+                    
+                }
+                // img{
+                //     width:11px;
+                //     height:13px;
+                //     padding: 4px;
+                // }
             }
 
 
@@ -165,9 +177,29 @@
                                  padding-left: 2%;
                                  display: inline-block;
                                  vertical-align:top;
+                                 .social{
+                                     padding-top: 8px;
+                                    display:flex;
+                                }
                                  .fab{
-                                     img{
-                                         padding-top: 9%;
+                                     padding-right: 10px;
+                                    height: 25px;
+                                    width: 15px;
+                                    margin-right: 1rem;
+                                    display: flex;
+                                    /* justify-content: center; */
+                                    align-items: center;
+                                    font-size: 25px;
+                                    /* line-height: 1; */
+                                     .fa{
+                                         background-color: white;
+                                         border-radius:0;
+                                         color:black;
+                                         //display:flex;
+                                         //padding-top: 9%;
+                                         &:hover{
+                                            font-size:40px;
+                                        }
                                      }
                                  }
                                  form{
@@ -383,7 +415,7 @@
                             padding-top: 58px;
                             .process-image{
                                 img{
-                                    width: 818px; height: 357px; background-size: cover;
+                                    width: 805px; height: 346px; background-size: cover;
                                 }
                             }
                             .process-images{
@@ -402,8 +434,9 @@
                             .process-parts{
                                 display: flex;
                                 flex-flow:row wrap;
-                                //padding-left: 4%;
+                                
                                 .process-steps{
+                                    padding-left: 11px;
                                     //height:188px;
                                     display:flex;
                                     .down{
@@ -541,9 +574,9 @@
             }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width:768px){
     body{
-        width:100%;
+       // width:100%;
         height:auto !important;
         max-width:768px;
         margin:0 auto;
@@ -556,6 +589,11 @@
         }
         .logo{
             padding-left: 35px;
+        }
+        .nav-toggle{
+            left:4px;
+            top:0;
+            display: block;
         }
         .custom-navbar{
             ul{
@@ -601,11 +639,19 @@
                     top:20%;
                     .items{
                         width:21%;
+                        .social{
+                            display:flex;
+                        }
                         input{
                             width:101px;
                         }
+                        .fab{
+                            margin-right: 0;
+                            font-size: 19px;
+                        }
                     }
                 }
+                
             }
             .copyright{
                 width:746px;
@@ -661,6 +707,14 @@
                             .process-parts{
                                 padding-top: 16px;
                                // margin-left: 10%;
+                              .process-steps{
+                                .service{
+                                    .boundary{
+                                        width: 50px;
+                                        height: 49px;
+                                    }
+                                }
+                              }
                             }
                         }
                     }
@@ -715,7 +769,7 @@
             }
 }
 
-@media screen and (max-width: 360px){
+@media screen and (min-width: 360px) and (max-width: 414px){
     body{
         width:100%;
         height:auto !important;
@@ -810,6 +864,17 @@
                     left:0px;
                     top:20%;
                     .items{
+                        .social{
+                            .fab{
+                                height: 14px;
+                                width: 13px;
+                                display: flex;
+                                align-items: center;
+                                font-size: 8px;
+                                padding-right: 5px;
+                                margin-right: 0;
+                            }
+                        }
                         input{
                             width:52px;
                             font-size: 9px;
@@ -864,19 +929,19 @@
             .hero-body{
                 .container{
                     h2{
-                        top: 18%;
+                        top: 14%;
                         left: 29%;
                         width: 241px;
                         font-size: 20px;
                     }
                     h1{
-                        top: 26%;
+                        top: 21%;
                         left: 25%;
                         width: 182px;
                         font-size: 29px;
                     }
                     button{
-                        top: 32%;
+                        top: 26%;
                         left: 30%;
                         width: 139px;
                         font-size: 11px;
@@ -989,8 +1054,94 @@
         }
 }
 
+@media screen and (min-width: 320px) and (max-width: 359px){
 
-
-
-
-
+    .page-header{
+        .header{
+            &.content{
+                margin-top:0;
+            }
+        }
+        .nav-toggle{
+            left:2px;
+            top:2px;
+        }
+    }
+    .page-wrapper{
+        .header-mini-container{
+            font-size: 10px;
+        }
+    }
+    .columns{
+        .hero-body{
+            .container{
+                h2{
+                    font-size: 22px;
+                    width:170px;
+                }
+                h1{
+                    width:216px;
+                    font-size: 34px;
+                }
+                button{
+                    width: 156px;
+                    height: 31px;
+                    font-size: 11px;
+                    top: 36%;
+                    left: 26%;
+                }
+            }
+        }
+        .process{
+            height: 551px;
+            .container{
+                width:320px;
+                .space{
+                    .process-image{
+                        img{
+                            width: 314px;
+                            height: 338px;
+                            margin-left: 0; 
+                        }
+                    }
+                    .process-parts{
+                        display:none;
+                    }
+                }
+            }
+        }
+        .flexibility{
+            height:248px;
+            h1{
+                width:248px;
+                font-size: 13px;
+                top: 18%;
+            }
+            p{
+                width: 296px;
+                top: 37%;
+                left: 6%;
+                font-size: 12px;
+            }
+            button{
+                top: 68%;
+                left: 23%;
+                width: 169px;
+                height: 35px;
+            }
+        }
+        .blogs{
+            h4{
+                width: 118px;
+                font-size: 17px;
+            }
+            p{
+                width: 129px;
+                font-size: 11px;
+                top: 43%;
+            }
+        }
+    }
+    
+    
+    }
