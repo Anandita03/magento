@@ -6,6 +6,13 @@
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    
+    <head>
+        <!-- <css src="css/font-awesome.min.css"/> -->
+        <css src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" src_type="url"/>
+    </head>
+    
+    
     <body>
     <referenceBlock name="header.panel" remove="true" />
     <referenceBlock name="navigation.sections" remove="true" />

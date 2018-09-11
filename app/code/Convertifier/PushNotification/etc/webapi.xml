@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/pushnotification" method="PUT">
+        <service class="Convertifier\PushNotification\Api\CrudRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/pushnotification/:id" method="GET">
+        <service class="Convertifier\PushNotification\Api\CrudRepositoryInterface" method="get"/>
+        <resources>
+            <resource ref="anonymous"/>
+            <!-- <resource ref="Convertifier_PushNotification::push"/> -->
+        </resources>
+    </route>
+    <route url="/V1/pushnotification/:id" method="DELETE">
+        <service class="Convertifier\PushNotification\Api\CrudRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="anonymous"/>
+            <!-- <resource ref="Convertifier_PushNotification::push"/> -->
+    </resources>
+    </route>
+    <route url="/V1/pushnotification" method="POST">
+        <service class="Convertifier\PushNotification\Api\CrudRepositoryInterface" method="create"/>
+        <resources>
+            <resource ref="anonymous"/>
+            <!-- <resource ref="Convertifier_PushNotification::push"/> -->
+        </resources>
+        <data>
+            <parameter name="name" force="true">%name%</parameter>
+            <parameter name="email" force="true">%email%</parameter>
+        </data>
+    </route>
+</routes>
+
+
+

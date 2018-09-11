@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- Create -->
+    <route url="/V1/customapi" method="POST">
+        <service class="Converty\CustomApi\Api\CustomRepositoryInterface" method="create"/>
+        <resources>
+             <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <!-- Update -->
+    <route url="/V1/customapi/:id" method="PUT">
+        <service class="Converty\CustomApi\Api\CustomRepositoryInterface" method="update"/>
+        <resources>
+             <resource ref="anonymous"/>
+             <!-- <resource ref="Converty_CustomApi::push"/> -->
+        </resources>
+    </route>
+    <!-- Get -->
+    <route url="/V1/customapi/:id" method="GET">
+        <service class="Converty\CustomApi\Api\CustomRepositoryInterface" method="get"/>
+        <resources>
+             <!-- <resource ref="anonymous"/> -->
+             <resource ref="Converty_CustomApi::push"/>
+        </resources>
+    </route>
+    <!-- Delete -->
+    <route url="/V1/customapi/:id" method="DELETE">
+        <service class="Converty\CustomApi\Api\CustomRepositoryInterface" method="delete"/>
+        <resources>
+             <!-- <resource ref="anonymous"/> -->
+             <resource ref="Converty_CustomApi::push"/>
+        </resources>
+    </route>
+</routes>
